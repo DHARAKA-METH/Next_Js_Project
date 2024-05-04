@@ -1,0 +1,13 @@
+:root{
+    --bg:#0d0c22;
+    --bgsoft:#2dd2b42;
+    --text:white;
+    --textsoft:#e5e5e5;
+    --btn:#3673fd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
