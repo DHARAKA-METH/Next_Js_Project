@@ -3,3 +3,12 @@
     align-items: center;
     gap: 10px;
 }
+.logout{
+    padding: 10px;
+    font-weight: bold;
+    background-color: white;
+    color: #0d0c22;
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+}

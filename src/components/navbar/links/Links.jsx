@@ -31,7 +31,7 @@ const admin=true;
       {session ?(
         <>
         {admin && <NavLinks title={'Admin'} path={'/admin'}/>}
-        <button>LogOut</button>
+        <button className={style.logout}>LogOut</button>
         </>
       ):<NavLinks title={'Login'} path={'/login'}/>}
     </div>
