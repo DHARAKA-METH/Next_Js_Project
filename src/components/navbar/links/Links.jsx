@@ -6,7 +6,7 @@ import style from './links.module.css'
 
 const Links = () => {
 
-  const [open, setoOpen] = useState(false);
+  const [open, setoOpen] = useState(true);
 
   const links = [
     {
@@ -29,6 +29,7 @@ const Links = () => {
   const session = true;
   const admin = true;
   return (
+    <div className={style.container}>
     <div className={style.links}>
       {links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}
       {session ? (
@@ -40,9 +41,10 @@ const Links = () => {
 
       <button onClick={(() => setoOpen((prev)=>!prev))}>Menu</button>
       {
-        open && <div>{links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}</div>
+        open && <div className={style.mobileLinks}>{links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}</div>
       }
     </div>
+      </div>
   )
 }
 
