@@ -6,7 +6,7 @@ import style from './links.module.css'
 
 const Links = () => {
 
-  const [open, setoOpen] = useState(true);
+  const [open, setoOpen] = useState(false);
 
   const links = [
     {
@@ -30,21 +30,21 @@ const Links = () => {
   const admin = true;
   return (
     <div className={style.container}>
-    <div className={style.links}>
-      {links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}
-      {session ? (
-        <>
-          {admin && <NavLinks title={'Admin'} path={'/admin'} />}
-          <button className={style.logout}>LogOut</button>
-        </>
-      ) : <NavLinks title={'Login'} path={'/login'} />}
+      <div className={style.links}>
+        {links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}
+        {session ? (
+          <>
+            {admin && <NavLinks title={'Admin'} path={'/admin'} />}
+            <button className={style.logout}>LogOut</button>
+          </>
+        ) : <NavLinks title={'Login'} path={'/login'} />}
 
-      <button onClick={(() => setoOpen((prev)=>!prev))}>Menu</button>
-      {
-        open && <div className={style.mobileLinks}>{links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}</div>
-      }
-    </div>
       </div>
+        <button className={style.menuBtn} onClick={(() => setoOpen((prev) => !prev))}>Menu</button>
+        {
+          open && <div className={style.mobileLinks}>{links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}</div>
+        }
+    </div>
   )
 }
 

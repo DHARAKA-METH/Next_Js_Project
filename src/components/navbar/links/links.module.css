@@ -1,3 +1,5 @@
+
+
 .links{
     display: flex;
     align-items: center;
@@ -26,6 +28,26 @@
     right:0;
     background-color: rebeccapurple;
     overflow: hidden;
-    transition:height 1.5s ease-in-out;
+    transition: all ease-in-out 0.5s;
+    
+}
+
+.menuBtn{
+    display: none;
+    padding:10px 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    .links{
+        display: none;
+    }
+    .menuBtn{
+        display: block;
+        padding:10px 10px;
+        border: none;
+        font-weight: bold;
+    }
     
 }
