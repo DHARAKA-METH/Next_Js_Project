@@ -40,10 +40,10 @@ const Links = () => {
         ) : <NavLinks title={'Login'} path={'/login'} />}
 
       </div>
-        <button className={style.menuBtn} onClick={(() => setoOpen((prev) => !prev))}>Menu</button>
-        {
-          open && <div className={style.mobileLinks}>{links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}</div>
-        }
+      <button className={style.menuBtn} onClick={(() => setoOpen((prev) => !prev))}>Menu</button>
+      {
+        open && <div className={style.mobileLinks}>{links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}</div>
+      }
     </div>
   )
 }
