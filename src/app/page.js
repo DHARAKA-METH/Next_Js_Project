@@ -10,16 +10,16 @@ const Home = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
           blanditiis adipisci minima reiciendis a autem assumenda dolore.
         </p>
+        <div className={styles.buttons}>
+          <button className={styles.button}>Learn More.</button>
+          <button className={styles.button}>Contact</button>
+        </div>
+        <div className={styles.brands}>
+          <Image src="/brands.png" alt="brandsImg" fill className={styles.branImg} />
+        </div>
       </div>
-      <div className={styles.buttons}>
-      <button className={styles.button}>Learn More.</button>
-      <button className={styles.button}>Contact</button>
-       </div>
-       <div className={styles.brands}>
-        <Image src="/brands.png"  alt="brandsImg" fill className={styles.branImg}/>
-       </div>
       <div className={styles.imageContainer}>
-        <Image src="/hero.gif"  alt="heroImg" fill className={styles.heroImg}/>
+        <Image src="/hero.gif" alt="heroImg" fill className={styles.heroImg} />
       </div>
     </div>
   );

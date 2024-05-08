@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    gap: 100px;
+}
+
+.textContainer{
+    flex:1;
+}
+
+
+
+.imageContainer{
+    flex:1;
+    position: relative;
+}
