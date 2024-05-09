@@ -1,9 +1,11 @@
-import React from 'react'
-
+import PostCard from "@/components/postCard/postCard"
+import styles from "./blog.module.css"
 const BlogPage = () => {
   return (
-    <div>
-      BlogPage
+    <div className={styles.container}>
+      <PostCard/>
+      <PostCard/>
+      <PostCard/>
     </div>
   )
 }
