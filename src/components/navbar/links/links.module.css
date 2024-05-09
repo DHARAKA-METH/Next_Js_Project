@@ -15,6 +15,7 @@
 }
 
 .mobileLinks {
+    z-index: 10000;
     position: absolute;
     display: flex;
     flex-direction: column;
