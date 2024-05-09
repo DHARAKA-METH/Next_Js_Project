@@ -44,3 +44,54 @@
 
 
 }
+
+@media screen and (max-width:768px) {
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        
+   
+    }
+
+    .textContainer{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .subtitle{
+        color: var(--btn);
+    }
+    
+    .title{
+        font-size: 54px;
+    }
+    
+    .desc{
+        font-size: 20px;
+        font-weight: 300;
+    }
+    
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        
+    }
+   
+    .imageContainer{
+display: none;
+    
+    
+    }
+    .img{
+        display: none;
+    }
+ 
+
+}
