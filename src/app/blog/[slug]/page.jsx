@@ -13,7 +13,7 @@ const SinglePostPage = () => {
       <div className={styles.textContainer}>
         <h1 className={styles.title}>Title</h1>
         <div className={styles.detail}>
-          <Image className={styles.avatar} width={50} height={50} src="/post.png"  alt="" />
+          <Image className={styles.avatar} width={50} height={50} src="/post.png" alt="" />
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Author</span>
             <span className={styles.detailValue}>Terry Jefferson</span>
