@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./postCard.module.css";
 import Link from "next/link";
 
+
 const PostCard = () => {
     return (
         <div className={styles.container}>
@@ -13,8 +14,8 @@ const PostCard = () => {
             </div>
             <div className={styles.bottom}>
                 <h1 className={styles.title}>Title</h1>
-                <p className={styles.desc}>Desc</p>
-                <Link href="/blog/post">READ MORE</Link>
+                <p className={styles.desc}>that father outside principle perhaps automobile situation possibly bring enter stretch far strong bear poetry tall should pet breeze appearance task barn ten writing</p>
+                <Link className={styles.link} href="/blog/post">READ MORE</Link>
             </div>
         </div>
     )

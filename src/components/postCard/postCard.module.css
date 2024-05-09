@@ -29,7 +29,12 @@
 
 }
 .desc{
+    width: 90%;
     margin-bottom: 10px;
     font-weight: 300;
     color: gray;
+}
+
+.link{
+    text-decoration: underline;
 }
