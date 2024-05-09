@@ -33,9 +33,6 @@
 
 .menuBtn {
     display: none;
-    padding: 10px 10px;
-    border: none;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -46,9 +43,7 @@
 
     .menuBtn {
         display: block;
-        padding: 10px 10px;
-        border: none;
-        font-weight: bold;
+
     }
 
 }

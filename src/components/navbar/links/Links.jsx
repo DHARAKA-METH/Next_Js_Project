@@ -1,8 +1,8 @@
 "use client"
-import Link from 'next/link';
 import React, { useState } from 'react'
 import NavLinks from './navLinks/NavLinks';
 import style from './links.module.css'
+import Image from 'next/image';
 
 const Links = () => {
 
@@ -40,7 +40,8 @@ const Links = () => {
         ) : <NavLinks title={'Login'} path={'/login'} />}
 
       </div>
-      <button className={style.menuBtn} onClick={(() => setoOpen((prev) => !prev))}>Menu</button>
+      {/* <button className={style.menuBtn} onClick={(() => setoOpen((prev) => !prev))}>Menu</button> */}
+      <Image className={style.menuBtn}  width={30} height={30} src="/menu.png" alt=''  onClick={(() => setoOpen((prev) => !prev))}/>
       {
         open && <div className={style.mobileLinks}>{links.map(({ title, path }) => <NavLinks title={title} path={path} key={title} />)}</div>
       }
