@@ -15,11 +15,23 @@ const Home = () => {
           <button className={styles.button}>Contact</button>
         </div>
         <div className={styles.brands}>
-          <Image src="/brands.png" alt="brandsImg" fill className={styles.branImg} />
+          <Image
+            src="/brands.png"
+            alt="brandsImg"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className={styles.branImg}
+          />
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <Image src="/hero.gif" alt="heroImg" width={500} height={500} className={styles.heroImg} />
+        <Image
+          src="/hero.gif"
+          alt="heroImg"
+          width={500}
+          height={500}
+          className={styles.heroImg}
+        />
       </div>
     </div>
   );
