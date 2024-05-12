@@ -3,16 +3,16 @@ import styles from "./blog.module.css";
 const BlogPage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.post}>
+      <div className={styles.posts}>
         <PostCard />
       </div>
-      <div className={styles.post}>
+      <div className={styles.posts}>
         <PostCard />
       </div>
-      <div className={styles.post}>
+      <div className={styles.posts}>
         <PostCard />
       </div>
-      <div className={styles.post}>
+      <div className={styles.posts}>
         <PostCard />
       </div>
     </div>

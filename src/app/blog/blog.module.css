@@ -3,9 +3,9 @@
     flex-wrap: wrap;
     gap: 40px;
 }
-.post{
+.posts{
     width: 30%;
-    z-index: -1;
+    
 }
 
 @media screen and (max-width:1200px) {
