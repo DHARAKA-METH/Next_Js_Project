@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import React from 'react'
-import styles from './about.module.css'
+import Image from "next/image";
+import React from "react";
+import styles from "./about.module.css";
 
 const About = () => {
   return (
@@ -35,12 +35,13 @@ const About = () => {
         <Image
           src="/about.png"
           alt="About Image"
-          width={500} height={500}
+          width={500}
+          height={500}
           className={styles.img}
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
