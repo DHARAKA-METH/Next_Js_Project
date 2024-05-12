@@ -1,11 +1,17 @@
-import Image from 'next/image';
-import styles from './contact.module.css';
+import Image from "next/image";
+import styles from "./contact.module.css";
 
 const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <Image src="/contact.png" alt="" width={500} height={500} className={styles.img} />
+        <Image
+          src="/contact.png"
+          alt=""
+          width={500}
+          height={500}
+          className={styles.img}
+        />
       </div>
       <div className={styles.formContainer}>
         {/* <HydrationTestNoSSR/> */}
@@ -25,7 +31,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
