@@ -1,8 +1,8 @@
 //TEMPARY DATA
 
 const users = [
-  { id: 1, name: "john" },
-  { id: 2, name: "jane" },
+  { id: 1, username: "john" },
+  { id: 2, username: "jane" },
 ];
 
 const posts = [
@@ -17,9 +17,9 @@ export const getPosts = async () => {
 };
 
 export const getPost = async (id) => {
-  posts.find((post) => post.id === parseInt(id));
+  return posts.find((post) => post.id === parseInt(id));
 };
 
 export const getUser = async (id) => {
-  posts.find((user) => user.id === parseInt(id));
+  return users.find((user) => user.id === parseInt(id));
 };
