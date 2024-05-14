@@ -3,9 +3,10 @@ import styles from "./singlePost.module.css";
 
 
 
-const SinglePostPage = () => {
-
-  return (
+const SinglePostPage = ({params}) => {
+console.log('hear params',params)
+  
+return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         <Image className={styles.img} src="/post.png" width={400} height={700} alt="" />
