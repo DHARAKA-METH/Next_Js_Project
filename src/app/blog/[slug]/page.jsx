@@ -18,8 +18,10 @@ const SinglePostPage = async ({ params }) => {
   // const post = await getData(slug);
 
   // get by tempory data without API
+  console.log(slug)
   const post = await getPost(slug);
-
+  console.log(post.userId)
+  
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
