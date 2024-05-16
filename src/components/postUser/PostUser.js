@@ -15,7 +15,7 @@ const PostUser = async ({ userId }) => {
 
   // get data from tempory data in lib Without API
   const user = await getUser(userId);
-  console.log(userId)
+  console.log(user.id)
   return (
     <div className={styles.detailText}>
       <span className={styles.detailTitle}>Author</span>
