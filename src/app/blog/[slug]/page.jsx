@@ -4,6 +4,15 @@ import PostUser from "@/components/postUser/PostUser";
 import { Suspense } from "react";
 import { getPost, getUser } from "@/lib/data";
 
+export const generateMetadata = async ({ params }) => {
+  const { slug } = params;
+  const post = await getPost(slug);
+  return {
+    title: post.title,
+    description: post.desc,
+  };
+};
+
 // const getData = async (slug) => {
 //   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
 //   if (!res.ok) {
@@ -18,11 +27,11 @@ const SinglePostPage = async ({ params }) => {
   // const post = await getData(slug);
 
   // get by tempory data without API
-  console.log(slug)
+  console.log(slug);
   const post = await getPost(slug);
   const user = await getUser(post.userId);
-  console.log(user.username)
-  
+  console.log(user.username);
+
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
