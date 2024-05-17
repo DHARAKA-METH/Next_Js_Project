@@ -3,9 +3,9 @@ import styles from "./blog.module.css";
 import { getPosts } from "@/lib/data";
 
 
-export const metadata={
-  title:"Blog Page",
-  description:"Blog description",
+export const metadata = {
+  title: "Blog Page",
+  description: "Blog description",
 }
 
 // const getData = async () => {
