@@ -2,6 +2,12 @@ import PostCard from "@/components/postCard/postCard";
 import styles from "./blog.module.css";
 import { getPosts } from "@/lib/data";
 
+
+export const metadata={
+  title:"Blog Page",
+  description:"Blog description",
+}
+
 // const getData = async () => {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
 //     next: { revalidate: 3600 },

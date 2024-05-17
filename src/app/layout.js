@@ -6,8 +6,11 @@ import Footer from '@/components/footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next App',
-  description: 'Next.js starter app',
+  title: {
+    default: 'Next.js 14 Homepage',
+    template: "%s | Next.js 14"
+  },
+  description: "Next.js starter app description"
 }
 
 export default function RootLayout({ children }) {
@@ -15,11 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className='container'>
-        <Navbar/>
-        {children}
-        <Footer/>
+          <Navbar />
+          {children}
+          <Footer />
         </div>
-        </body>
+      </body>
     </html>
   )
 }
