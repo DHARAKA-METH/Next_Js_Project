@@ -6,6 +6,7 @@ import { getPost, getUser } from "@/lib/data";
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
+  // console.log(slug);
   const post = await getPost(slug);
   return {
     title: post.title,
@@ -24,6 +25,7 @@ const getData = async (slug) => {
 
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
+  // console.log({ slug });
   const post = await getData(slug);
 
   // get by tempory data without API
