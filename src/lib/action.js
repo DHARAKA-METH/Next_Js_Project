@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { Post } from "./models";
 import { connectToDb } from "./utils";
 
-export const formData = async (formData) => {
+export const newPost = async (formData) => {
   const { title, desc, img, userId, slug } = Object.fromEntries(formData);
 
   try {
@@ -23,6 +23,18 @@ export const formData = async (formData) => {
     console.log(err);
     return { error: "somthing error" };
   }
+};
 
-  console.log(title, desc, img, userId, slug);
+export const deletePost = async (formData) => {
+  const { title, desc, img, userId, slug } = Object.fromEntries(formData);
+
+  try {
+    connectToDb();
+    await Post.findByIdAndDelete(userId);
+    console.log("deleted from db");
+    revalidatePath("/blog"); // for refresh page
+  } catch (err) {
+    console.log(err);
+    return { error: "somthing error" };
+  }
 };
