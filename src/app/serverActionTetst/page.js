@@ -1,14 +1,19 @@
-import { sayhellow } from '@/lib/action'
-import React from 'react'
+import { formData } from "@/lib/action";
+import React from "react";
 
 const ServerActionTest = () => {
   return (
     <div>
-      <form action={sayhellow}>
-<button>Test me</button>
+      <form action={formData}>
+        <input type="text" placeholder="title" name="title" />
+        <input type="text" placeholder="desc" name="desc" />
+        <input type="text" placeholder="img url" name="img" />
+        <input type="text" placeholder="userId" name="userId" />
+        <input type="text" placeholder="slug" name="slug" />
+        <button> Create Post</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default ServerActionTest
+export default ServerActionTest;
