@@ -60,6 +60,19 @@ const Links = ({ session }) => {
           {links.map(({ title, path }) => (
             <NavLinks title={title} path={path} key={title} />
           ))}
+
+          {session?.user ? (
+            <>
+              {session.user?.isAdmin && (
+                <NavLinks title={"Admin"} path={"/admin"} />
+              )}
+              <form action={logoutHandle}>
+                <button className={style.logout}>LogOut</button>
+              </form>
+            </>
+          ) : (
+            <NavLinks title={"Login"} path={"/login"} />
+          )}
         </div>
       )}
     </div>
