@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { Post } from "./models";
 import { connectToDb } from "./utils";
+import { signIn } from "./auth";
 
 export const newPost = async (formData) => {
   const { title, desc, img, userId, slug } = Object.fromEntries(formData);
@@ -37,4 +38,8 @@ export const deletePost = async (formData) => {
     console.log(err);
     return { error: "somthing error" };
   }
+};
+
+export const loginHandle = async () => {
+  await signIn("github");
 };
