@@ -1,4 +1,4 @@
-import { loginHandle } from "@/lib/action";
+import { loginForm, loginHandle } from "@/lib/action";
 import styles from "./loginForm.module.css";
 const LoginPage = async () => {
   return (
@@ -6,7 +6,6 @@ const LoginPage = async () => {
       <form action={loginHandle}>
         <button>Login with Github</button>
       </form>
-
 
       <div className={styles.container}>
         <div className={styles.wrapper}>
