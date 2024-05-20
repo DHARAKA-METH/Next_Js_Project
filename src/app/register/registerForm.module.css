@@ -39,4 +39,8 @@
   font-weight: bold;
   border: none;
   border-radius: 15px;
+  opacity: 0.5;
+}
+.form button:hover{
+  opacity: 1;
 }
