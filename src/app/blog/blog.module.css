@@ -1,24 +1,21 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .posts {
-    width: 30%;
-
+  width: 30%;
 }
 
-@media screen and (max-width:1200px) {
-    .post {
-        width: 45%;
-    }
-
+@media screen and (max-width: 1200px) {
+  .post {
+    width: 45%;
+  }
 }
 
-@media screen and (max-width:768px) {
-    .post {
-        width: 100%;
-    }
-
+@media screen and (max-width: 768px) {
+  .post {
+    width: 100%;
+  }
 }
