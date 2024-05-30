@@ -53,7 +53,7 @@ export const registerForm = async (formData) => {
     Object.fromEntries(formData);
   // console.log({username})
   if (password !== passwordRepeat) {
-    return "password do not match";
+    return { error: "password do not match" };
   }
 
   try {
@@ -61,7 +61,7 @@ export const registerForm = async (formData) => {
     const user = await User.findOne({ username });
     if (user) {
       //console.log("user Alredy Exists")
-      return "user Alredy Exists";
+      return { error: "user Alredy Exists" };
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -75,6 +75,7 @@ export const registerForm = async (formData) => {
     });
     await newUser.save();
     console.log("saved to db");
+    return { success: true };
   } catch (err) {
     console.log(err);
     return { error: "something went wrong!" };
