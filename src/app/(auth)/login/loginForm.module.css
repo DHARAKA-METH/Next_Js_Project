@@ -16,18 +16,4 @@
   gap: 30px;
   border-radius: 5px;
 }
-.GithubBtn{
-  padding: 15px;
-  cursor: pointer;
-  background-color: white;
-  color: rgb(0, 0, 0);
-  font-weight:500;
-  font-size: 16px;
-  border: none;
 
-  
-}
-.GithubBtn:hover{
-  background-color: black;
-  color: white;
-}

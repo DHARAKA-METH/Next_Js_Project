@@ -1,29 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
 
-.form{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-  
-  .form input{
-    padding: 20px;
-    background-color: var(--bg);
-    color: var(--textColor);
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .form button{
-    padding: 20px;
-    cursor: pointer;
-    background-color: var(--btn);
-    color: var(--textColor);
-    font-weight: bold;
-    border: none;
-    border-radius: 15px;
-    opacity: 0.5;
-  }
-  .form button:hover{
-    opacity: 1;
-  }
+.form input {
+  padding: 20px;
+  background-color: var(--bg);
+  color: var(--textColor);
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 20px;
+  cursor: pointer;
+  background-color: var(--btn);
+  color: var(--textColor);
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  opacity: 0.5;
+}
+.form button:hover {
+  opacity: 1;
+}
+.GithubBtn {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+}
+.GithubBtn:hover {
+  background-color: black;
+  color: white;
+}
