@@ -48,7 +48,7 @@ export const logoutHandle = async () => {
   await signOut();
 };
 
-export const registerForm = async (formData) => {
+export const registerForm = async (previousState, formData) => {
   const { username, email, img, password, passwordRepeat } =
     Object.fromEntries(formData);
   // console.log({username})
