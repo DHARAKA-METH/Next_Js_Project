@@ -8,7 +8,10 @@ const LoginPage = async () => {
         <div className={styles.wrapper}>
           <LoginForm />
           <div>
-            <Link href="/register">{"Don't have an account ? "}<b>Register </b></Link>
+            <Link href="/register">
+              {"Don't have an account ? "}
+              <b>Register </b>
+            </Link>
           </div>
         </div>
       </div>
