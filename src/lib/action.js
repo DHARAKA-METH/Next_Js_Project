@@ -6,7 +6,7 @@ import { connectToDb } from "./utils";
 import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
 
-export const newPost = async (prevState,formData) => {
+export const newPost = async (prevState, formData) => {
   const { title, desc, img, userId, slug } = Object.fromEntries(formData);
 
   try {
@@ -43,13 +43,16 @@ export const deletePost = async (formData) => {
   }
 };
 
-export const addUser = async (prevState,formData) => {
-  const { username,email,password,img } = Object.fromEntries(formData);
+export const addUser = async (prevState, formData) => {
+  const { username, email, password, img } = Object.fromEntries(formData);
 
   try {
     connectToDb();
     const newUser = new User({
-      username,email,password,img
+      username,
+      email,
+      password,
+      img,
     });
     await newUser.save();
     console.log("saved to db");
@@ -65,7 +68,7 @@ export const deleteUser = async (formData) => {
 
   try {
     connectToDb();
-    await Post.deleteMany({userId:id})//when use delete posts are aumaticaly delete
+    await Post.deleteMany({ userId: id }); //when use delete posts are aumaticaly delete
     await User.findByIdAndDelete(userId);
     console.log("deleted from db");
     revalidatePath("/admin"); // for refresh page
@@ -74,7 +77,6 @@ export const deleteUser = async (formData) => {
     return { error: "somthing error" };
   }
 };
-
 
 export const loginHandle = async () => {
   await signIn("github");
