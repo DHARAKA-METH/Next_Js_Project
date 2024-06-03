@@ -6,7 +6,7 @@ import { connectToDb } from "./utils";
 import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
 
-export const newPost = async (formData) => {
+export const newPost = async (prevState,formData) => {
   const { title, desc, img, userId, slug } = Object.fromEntries(formData);
 
   try {
@@ -21,6 +21,7 @@ export const newPost = async (formData) => {
     await newPost.save();
     console.log("saved to db");
     revalidatePath("/blog"); // for refresh page
+    revalidatePath("/admin");
   } catch (err) {
     console.log(err);
     return { error: "somthing error" };
@@ -35,11 +36,45 @@ export const deletePost = async (formData) => {
     await Post.findByIdAndDelete(userId);
     console.log("deleted from db");
     revalidatePath("/blog"); // for refresh page
+    revalidatePath("/admin");
   } catch (err) {
     console.log(err);
     return { error: "somthing error" };
   }
 };
+
+export const addUser = async (prevState,formData) => {
+  const { username,email,password,img } = Object.fromEntries(formData);
+
+  try {
+    connectToDb();
+    const newUser = new User({
+      username,email,password,img
+    });
+    await newUser.save();
+    console.log("saved to db");
+    revalidatePath("/admin"); // for refresh page
+  } catch (err) {
+    console.log(err);
+    return { error: "somthing error" };
+  }
+};
+
+export const deleteUser = async (formData) => {
+  const { userId } = Object.fromEntries(formData);
+
+  try {
+    connectToDb();
+    await Post.deleteMany({userId:id})//when use delete posts are aumaticaly delete
+    await User.findByIdAndDelete(userId);
+    console.log("deleted from db");
+    revalidatePath("/admin"); // for refresh page
+  } catch (err) {
+    console.log(err);
+    return { error: "somthing error" };
+  }
+};
+
 
 export const loginHandle = async () => {
   await signIn("github");
