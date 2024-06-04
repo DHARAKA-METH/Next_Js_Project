@@ -1,5 +1,6 @@
 import AdminPost from "@/components/adminPosts/AdminPosts";
 import styles from "./admin.module.css";
+import AdminUsers from "@/components/adminUsers/AdminUsers";
 
 const AdminPage = () => {
   return (
@@ -7,14 +8,16 @@ const AdminPage = () => {
       <div>
         <h2>Post Section</h2>
         <div>
-          <AdminPost/>
+          <AdminPost />
         </div>
         <div>Add Post</div>
       </div>
       <div>
         <div>
           <h2>User Section</h2>
-          <div>User</div>
+          <div>
+            <AdminUsers />
+          </div>
           <div>Add Users</div>
         </div>
       </div>

@@ -65,10 +65,11 @@ export const addUser = async (prevState, formData) => {
 
 export const deleteUser = async (formData) => {
   const { userId } = Object.fromEntries(formData);
+  console.log(userId)
 
   try {
     connectToDb();
-    await Post.deleteMany({ userId: id }); //when use delete posts are aumaticaly delete
+    await Post.deleteMany({ userId }); //when use delete posts are aumaticaly delete
     await User.findByIdAndDelete(userId);
     console.log("deleted from db");
     revalidatePath("/admin"); // for refresh page
