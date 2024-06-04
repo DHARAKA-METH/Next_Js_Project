@@ -33,7 +33,7 @@ const SinglePostPage = async ({ params }) => {
   // const post = await getPost(slug);
 
   const user = await getUser(post.userId);
-  console.log(user.username);
+  //console.log(user.username);
 
   return (
     <div className={styles.container}>
