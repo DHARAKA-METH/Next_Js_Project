@@ -1,16 +1,25 @@
-import AdminPostForm from "@/components/adminPostForm/AdminPostForm";
-import React from "react";
+import AdminPost from "@/components/adminPosts/AdminPosts";
+import styles from "./admin.module.css";
 
 const AdminPage = () => {
-  return( <div>
-    AdminPage
-    <div>
-      <AdminPostForm/>
+  return (
+    <div className={styles.container}>
+      <div>
+        <h2>Post Section</h2>
+        <div>
+          <AdminPost/>
+        </div>
+        <div>Add Post</div>
+      </div>
+      <div>
+        <div>
+          <h2>User Section</h2>
+          <div>User</div>
+          <div>Add Users</div>
+        </div>
+      </div>
     </div>
-    <div>
-    
-    </div>
-    </div>
-)};
+  );
+};
 
 export default AdminPage;
