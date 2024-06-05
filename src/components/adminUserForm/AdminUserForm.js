@@ -6,7 +6,7 @@ import styles from "./adminUserForm.module.css";
 const AdminUserForm = () => {
   const [state, formAction] = useFormState(addUser, undefined);
   return (
-    <div>
+    <div className={styles.container}>
       <h2>ADD New User</h2>
       <form className={styles.form} action={formAction}>
         <input type="text" name="username" placeholder="username" />
