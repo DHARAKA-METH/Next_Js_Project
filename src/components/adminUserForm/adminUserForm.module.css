@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.form input {
+  padding: 8px;
+  background-color: var(--bgsoft);
+  color: var(--textColor);
+  border: none;
+  border-radius: 5px;
+}
+.form select {
+  padding: 8px;
+  background-color: var(--bgsoft);
+  color: var(--textColor);
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--btn);
+  color: var(--textColor);
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  opacity: 0.5;
+}
+.form button:hover {
+  opacity: 1;
+}

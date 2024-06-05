@@ -5,6 +5,7 @@ import AdminPostForm from "@/components/adminPostForm/AdminPostForm";
 import { auth } from "@/lib/auth";
 import AdminUserForm from "@/components/adminUserForm/AdminUserForm";
 
+
 const AdminPage = async () => {
   const session = await auth()
   //console.log(session.user.id)
