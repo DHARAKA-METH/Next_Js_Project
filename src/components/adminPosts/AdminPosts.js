@@ -7,14 +7,13 @@ const AdminPost = async () => {
   const posts = await getPosts();
 
   return (
-    <div>
-      <h2>Posts</h2>
+    <div className={styles.container}>
       {posts.map((post) => (
         <div key={post.id}>
           <Image alt={post.id} src={post.img} height={50} width={50} />
           <p>{post.desc}</p>
           <div>
-            <form action={deletePost}>
+            <form className={styles.form} action={deletePost}>
               <input type="hidden" name="userId" value={post.id} />
               <button>Delete</button>
             </form>

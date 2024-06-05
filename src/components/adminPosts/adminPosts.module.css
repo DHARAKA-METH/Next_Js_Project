@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+.form button {
+  padding: 2px;
+  background-color: red;
+  margin-top: 2px;
+  border: none;
+  font-weight: 300;
+}
