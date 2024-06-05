@@ -8,7 +8,7 @@ const AdminUsers = async () => {
   // users.map((user) => console.log(user.id));
 
   return (
-    <div>
+    <div className={styles.container}>
       {users.map((user) => (
         <div className={styles.mapContainer} key={user.id}>
           <div>
@@ -27,7 +27,7 @@ const AdminUsers = async () => {
               </h5>
             )}
             {!user.isAdmin && (
-              <form action={deleteUser}>
+              <form className={styles.form} action={deleteUser}>
                 <input type="hidden" value={user.id} name="userId" />
                 <button>Remove.</button>
               </form>
