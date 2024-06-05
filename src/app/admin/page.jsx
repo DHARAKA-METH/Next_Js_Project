@@ -3,6 +3,7 @@ import styles from "./admin.module.css";
 import AdminUsers from "@/components/adminUsers/AdminUsers";
 import AdminPostForm from "@/components/adminPostForm/AdminPostForm";
 import { auth } from "@/lib/auth";
+import AdminUserForm from "@/components/adminUserForm/AdminUserForm";
 
 const AdminPage = async () => {
   const session = await auth()
@@ -25,7 +26,7 @@ const AdminPage = async () => {
           <div>
             <AdminUsers />
           </div>
-          <div>Add Users</div>
+          <div><AdminUserForm/></div>
         </div>
       </div>
     </div>
