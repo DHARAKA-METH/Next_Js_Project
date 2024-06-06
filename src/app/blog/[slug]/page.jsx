@@ -26,11 +26,11 @@ const getData = async (slug) => {
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
   // console.log({ slug });
-  const post = await getData(slug);
+  // const post = await getData(slug);
 
   // get by tempory data without API
   // console.log(slug);
-  // const post = await getPost(slug);
+  const post = await getPost(slug);
 
   const user = await getUser(post.userId);
   //console.log(user.username);
