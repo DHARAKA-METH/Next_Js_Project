@@ -5,9 +5,8 @@ import AdminPostForm from "@/components/adminPostForm/AdminPostForm";
 import { auth } from "@/lib/auth";
 import AdminUserForm from "@/components/adminUserForm/AdminUserForm";
 
-
 const AdminPage = async () => {
-  const session = await auth()
+  const session = await auth();
   //console.log(session.user.id)
   return (
     <div className={styles.container}>
@@ -18,7 +17,7 @@ const AdminPage = async () => {
         </div>
         {/* <div>Add Post</div> */}
         <div>
-          <AdminPostForm uderId={session.user.id} />
+          <AdminPostForm userId={session.user.id} />
         </div>
       </div>
       <div>
@@ -27,7 +26,9 @@ const AdminPage = async () => {
           <div>
             <AdminUsers />
           </div>
-          <div><AdminUserForm/></div>
+          <div>
+            <AdminUserForm />
+          </div>
         </div>
       </div>
     </div>
