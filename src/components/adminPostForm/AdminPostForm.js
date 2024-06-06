@@ -1,10 +1,11 @@
 "use client";
 import { newPost } from "@/lib/action";
 import { useFormState } from "react-dom";
-import styles from "./adminPostForm.module.css"
+import styles from "./adminPostForm.module.css";
 
 const AdminPostForm = ({ userId }) => {
   const [state, formAction] = useFormState(newPost, undefined);
+  //console.log(userId)
   return (
     <div className={styles.container}>
       <h2>ADD New Post</h2>
