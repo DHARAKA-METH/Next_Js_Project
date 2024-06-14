@@ -1,3 +1,8 @@
+# Next Js Tutorial
+- Credit - Lama Dev Youtube Channnel..
+- Tutorial Link - https://youtu.be/vCOSTG10Y4o?si=84QnNxx6HN_c66n7
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
